@@ -1,15 +1,11 @@
-import React from 'react';
-import Login from './screens/Login'
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { View } from 'native-base';
-
-
+import { View, Text } from 'react-native'
+import React from 'react'
+import Register from './screens/Register'
 
 export default function App() {
-  return(
+  return (
     <View>
-      <Login/>
+      <Register/>
     </View>
   )
 }
