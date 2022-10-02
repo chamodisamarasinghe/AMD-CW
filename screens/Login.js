@@ -28,7 +28,7 @@ export default function Login({ navigation }) {
       <Input size="2xl" placeholder="Pass word" />
 
       
-      <Button colorScheme="success" mt="40%" fontWeight="bold" rounded="full" onPress={()=>{navigation.navigate("Register")}}>Login</Button>
+      <Button colorScheme="success" mt="40%" fontWeight="bold" rounded="full" onPress={()=>{navigation.navigate("CarDetails")}}>Login</Button>
 
       
       </VStack>

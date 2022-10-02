@@ -4,7 +4,8 @@ import Register from './screens/Register'
 import Login from './screens/Login'
 import AddData from './screens/AddData'
 import Home from './screens/Home'
-import Car from './screens/Car'
+import CarDetails from './screens/CarDetails'
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -16,8 +17,8 @@ export default function App() {
       <Stack.Navigator>
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="AddData" component={AddData} />
       <Stack.Screen name="Register" component={Register} />
+      <Stack.Screen name="CarDetails" component={CarDetails} />
       
     </Stack.Navigator>
   </NavigationContainer>
