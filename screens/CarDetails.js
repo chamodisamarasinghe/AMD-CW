@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
       // backgroundColor:'green'
     },
     stretch: {
-      width: 400,
-      height: 300,
+      width: 300,
+      height: 200,
       resizeMode: 'stretch',
       // marginTop:'10%'
     },
@@ -30,16 +30,16 @@ const CarDetails = () => {
   const {
     colors
   } = useTheme();
-  return <ScrollView w={["400", "300"]} h="80">
+  return <ScrollView w={["300", "300"]} h="80">
 
     
       <Center mt="3" mb="4">
-        <Heading fontSize="30">Toyota Aventador</Heading>
+        <Heading fontSize="30">BMW X2</Heading>
       </Center>
       <VStack flex="1">
 
       <Image  style={styles.stretch}
-          source={require("../assets/images/car.jpg")}/>
+          source={require("../assets/images/car10.jpg")}/>
 
             <Text style={styles.text}>Toyota Aventador</Text> 
             <Text style={styles.text}>Model 2022   -    2022 </Text> 
@@ -50,58 +50,90 @@ const CarDetails = () => {
            stroke="black" 
            strokeWidth={2}
            />
-            
-           
-      
-   
-                  
-        {/* {Object.keys(colors.cyan).map((key, index) => {
-        if (index >= 1 && index <= 5) return <Center py="4" bg={`cyan.${key}`}>
-                {key}
-              </Center>;
-      })} */}
-      
       </VStack>
+
+
       <Center mt="8" mb="4">
-        <Heading fontSize="xl">Yellow</Heading>
+        <Heading fontSize="30">Toyota Aqua</Heading>
       </Center>
       <VStack flex="1">
 
       <Image  style={styles.stretch}
-          source={require("../assets/images/Alto2.jpg")}/>
-        {/* {Object.keys(colors.cyan).map((key, index) => {
-        if (index >= 1 && index <= 5) return <Center py="4" bg={`yellow.${key}`}>
-                {key}
-              </Center>;
-      })} */}
+          source={require("../assets/images/car2.jpg")}/>
+        
       </VStack>
+
+
       <Center mt="8" mb="4">
-        <Heading fontSize="xl"> Violet</Heading>
+        <Heading fontSize="30">Citroen DS7</Heading>
       </Center>
       <VStack flex="1">
       <Image  style={styles.stretch}
-          source={require("../assets/images/allion.jpg")}/>
-        {/* {Object.keys(colors.violet).map((key, index) => {
-        if (index >= 1 && index <= 5) return <Center py="4" bg={`violet.${key}`}>
-                {key}
-              </Center>;
-      })} */}
+          source={require("../assets/images/car11.jpg")}/>
+        
       </VStack>
 
 
 
       <Center mt="8" mb="4">
-        <Heading fontSize="xl"> Violet</Heading>
+        <Heading fontSize="30"> Nissan Xtrail Hybrid</Heading>
       </Center>
       <VStack flex="1">
       <Image  style={styles.stretch}
-          source={require("../assets/images/car.jpg")}/>
-        {/* {Object.keys(colors.violet).map((key, index) => {
-        if (index >= 1 && index <= 5) return <Center py="4" bg={`violet.${key}`}>
-                {key}
-              </Center>;
-      })} */}
+          source={require("../assets/images/car3.jpg")}/>
       </VStack>
+
+
+
+      <Center mt="8" mb="4">
+        <Heading fontSize="30">Chevrolet Spark</Heading>
+      </Center>
+      <VStack flex="1">
+      <Image  style={styles.stretch}
+          source={require("../assets/images/car12.jpg")}/>
+      </VStack>
+
+
+      <Center mt="8" mb="4">
+        <Heading fontSize="30">Suzuki Vitara</Heading>
+      </Center>
+      <VStack flex="1">
+      <Image  style={styles.stretch}
+          source={require("../assets/images/car7.jpg")}/>
+
+      </VStack>
+
+
+
+      <Center mt="8" mb="4">
+        <Heading fontSize="30">Bentley Continental</Heading>
+      </Center>
+      <VStack flex="1">
+      <Image  style={styles.stretch}
+          source={require("../assets/images/car13.jpg")}/>
+        
+      </VStack>
+
+
+      <Center mt="8" mb="4">
+        <Heading fontSize="30">Suzuki Swift</Heading>
+      </Center>
+      <VStack flex="1">
+      <Image  style={styles.stretch}
+          source={require("../assets/images/car8.jpg")}/>
+      </VStack>
+
+
+      <Center mt="8" mb="4">
+        <Heading fontSize="30">Proton Saga</Heading>
+      </Center>
+      <VStack flex="1">
+      <Image  style={styles.stretch}
+          source={require("../assets/images/car9.jpg")}/>
+      </VStack>
+
+
+
     </ScrollView>;
 };
 
