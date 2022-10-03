@@ -20,6 +20,15 @@ const styles = StyleSheet.create({
       fontSize:25,
       marginStart:40,
       marginLeft:30
+    },
+
+    text1:{
+      color:'black',
+      fontWeight:'bold',
+      fontSize:20,
+      marginStart:40,
+      marginLeft:90,
+      marginTop:0.1
     }
   });
   
@@ -40,6 +49,9 @@ const CarDetails = () => {
         <Heading style={styles.text} fontSize="30" >BMW X2</Heading>
       </Center>
       </VStack>
+
+
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -47,9 +59,12 @@ const CarDetails = () => {
         base: "auto",
         md: "0"
       }}>
+
           <Button size="sm" colorScheme="secondary" rounded="full">
            View More
           </Button>
+
+          
         </HStack>
         <Divider style={{height:8 }} w="100%" />
 
@@ -63,6 +78,7 @@ const CarDetails = () => {
         <Heading style={styles.text} fontSize="30">Toyota Aqua</Heading>
       </Center>
       </VStack>
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -90,6 +106,7 @@ const CarDetails = () => {
         <Heading style={styles.text} fontSize="30">Citroen DS7</Heading>
       </Center>
       </VStack>
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -119,6 +136,7 @@ const CarDetails = () => {
         <Heading style={styles.text} fontSize="30"> Nissan Xtrail Hybrid</Heading>
       </Center>
       </VStack>
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -145,8 +163,11 @@ const CarDetails = () => {
           source={require("../assets/images/car12.jpg")}/>
           <Center mt="8" mb="4">
         <Heading style={styles.text} fontSize="30">Chevrolet Spark</Heading>
+    
       </Center>
+    
       </VStack>
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -155,6 +176,9 @@ const CarDetails = () => {
         md: "0"
       }}>
           
+
+          
+
           <Button size="sm" colorScheme="secondary" rounded="full">
            View More
           </Button>
@@ -174,6 +198,7 @@ const CarDetails = () => {
         <Heading style={styles.text} fontSize="30">Suzuki Vitara</Heading>
       </Center>
       </VStack>
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -203,6 +228,7 @@ const CarDetails = () => {
         <Heading style={styles.text} fontSize="30">Bentley Continental</Heading>
       </Center>
       </VStack>
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -231,6 +257,7 @@ const CarDetails = () => {
         <Heading style={styles.text} fontSize="30">Suzuki Swift</Heading>
       </Center>
       </VStack>
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -258,6 +285,7 @@ const CarDetails = () => {
         <Heading style={styles.text} fontSize="30">Proton Saga</Heading>
       </Center>
       </VStack>
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -286,6 +314,7 @@ const CarDetails = () => {
         <Heading style={styles.text} fontSize="30">Bentley Bentayga</Heading>
       </Center>
       </VStack>
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -314,6 +343,7 @@ const CarDetails = () => {
         <Heading style={styles.text} fontSize="30">BMW X1</Heading>
       </Center>
       </VStack>
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -343,6 +373,7 @@ const CarDetails = () => {
         <Heading style={styles.text} fontSize="30">Bentley Continental</Heading>
       </Center>
       </VStack>
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -371,6 +402,7 @@ const CarDetails = () => {
         <Heading style={styles.text} fontSize="30">Maruti Suzuki Swift</Heading>
       </Center>
       </VStack>
+      <Text style={styles.text1}>Model - 2022</Text>
       <HStack mb="2.5" mt="1.5" direction={{
         base: "column",
         md: "row"
@@ -387,7 +419,7 @@ const CarDetails = () => {
 
 
 
-
+        <Button colorScheme="success" mt="10%" fontWeight="bold" rounded="full" onPress={()=>{navigation.navigate("CarDetails")}}>Login</Button>
     </ScrollView>;
 };
 
