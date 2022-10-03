@@ -133,6 +133,40 @@ const CarDetails = () => {
       </VStack>
 
 
+      <Center mt="8" mb="4">
+        <Heading fontSize="30">Bentley Bentayga</Heading>
+      </Center>
+      <VStack flex="1">
+      <Image  style={styles.stretch}
+          source={require("../assets/images/car1.jpg")}/>
+      </VStack>
+
+
+      <Center mt="8" mb="4">
+        <Heading fontSize="30">BMW X1</Heading>
+      </Center>
+      <VStack flex="1">
+      <Image  style={styles.stretch}
+          source={require("../assets/images/car4.jpg")}/>
+      </VStack>
+
+
+      <Center mt="8" mb="4">
+        <Heading fontSize="30">Bentley Continental</Heading>
+      </Center>
+      <VStack flex="1">
+      <Image  style={styles.stretch}
+          source={require("../assets/images/car5.jpeg")}/>
+      </VStack>
+
+
+      <Center mt="8" mb="4">
+        <Heading fontSize="30">Maruti Suzuki Swift</Heading>
+      </Center>
+      <VStack flex="1">
+      <Image  style={styles.stretch}
+          source={require("../assets/images/car14.jpeg")}/>
+      </VStack>
 
     </ScrollView>;
 };
