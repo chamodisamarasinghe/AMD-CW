@@ -1,4 +1,4 @@
-import { ScrollView, VStack, Center, useTheme, Heading, NativeBaseProvider } from "native-base";
+import { ScrollView, VStack, Center, useTheme, Heading, NativeBaseProvider,Container,Button,HStack,Divider } from "native-base";
 import { View, Image, StyleSheet,Text} from 'react-native';
 import { Line ,x_axis} from "react-native-svg";
 
@@ -15,9 +15,9 @@ const styles = StyleSheet.create({
     },
   
     text:{
-      color: 'green',
+      color:'green',
       fontWeight:'bold',
-      fontSize:30,
+      fontSize:25,
       marginStart:40,
       marginLeft:30
     }
@@ -33,25 +33,31 @@ const CarDetails = () => {
   return <ScrollView w={["300", "300"]} h="80">
 
     
-      <Center mt="3" mb="4">
-        <Heading fontSize="30">BMW X2</Heading>
-      </Center>
       <VStack flex="1">
 
       <Image  style={styles.stretch}
           source={require("../assets/images/car10.jpg")}/>
 
-            <Text style={styles.text}>Toyota Aventador</Text> 
-            <Text style={styles.text}>Model 2022   -    2022 </Text> 
-
-
-           <Line
-           x1={x_axis}
-           stroke="black" 
-           strokeWidth={2}
-           />
+      <Center mt="3" mb="4">
+        <Heading style={styles.text} fontSize="30" >BMW X2</Heading>
+      </Center>
       </VStack>
+      
+      {/* <HStack mb="2.5" mt="1.5" direction={{
+        base: "column",
+        md: "row"
+      }} space={2} mx={{
+        base: "auto",
+        md: "0"
+      }}> */}
+          
+          <Button size="sm" colorScheme="secondary" rounded="full">
+           View More
+          </Button>
+          
+        {/* </HStack> */}
 
+        <Divider style={{height:8 }} w="100%" mt="10%"/>
 
       <Center mt="8" mb="4">
         <Heading fontSize="30">Toyota Aqua</Heading>
