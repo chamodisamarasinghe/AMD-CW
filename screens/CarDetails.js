@@ -1,5 +1,6 @@
 import { ScrollView, VStack, Center, useTheme, Heading, NativeBaseProvider } from "native-base";
 import { View, Image, StyleSheet,Text} from 'react-native';
+import { Line ,x_axis} from "react-native-svg";
 
 const styles = StyleSheet.create({
     container: {
@@ -33,17 +34,23 @@ const CarDetails = () => {
 
     
       <Center mt="3" mb="4">
-        <Heading fontSize="xl">Toyota Aventador</Heading>
+        <Heading fontSize="30">Toyota Aventador</Heading>
       </Center>
       <VStack flex="1">
 
       <Image  style={styles.stretch}
-          source={require("../assets/car.jpg")}/>
+          source={require("../assets/images/car.jpg")}/>
 
             <Text style={styles.text}>Toyota Aventador</Text> 
             <Text style={styles.text}>Model 2022   -    2022 </Text> 
 
 
+           <Line
+           x1={x_axis}
+           stroke="black" 
+           strokeWidth={2}
+           />
+            
            
       
    
@@ -61,7 +68,7 @@ const CarDetails = () => {
       <VStack flex="1">
 
       <Image  style={styles.stretch}
-          source={require("../assets/Alto2.jpg")}/>
+          source={require("../assets/images/Alto2.jpg")}/>
         {/* {Object.keys(colors.cyan).map((key, index) => {
         if (index >= 1 && index <= 5) return <Center py="4" bg={`yellow.${key}`}>
                 {key}
@@ -73,7 +80,7 @@ const CarDetails = () => {
       </Center>
       <VStack flex="1">
       <Image  style={styles.stretch}
-          source={require("../assets/allion.jpg")}/>
+          source={require("../assets/images/allion.jpg")}/>
         {/* {Object.keys(colors.violet).map((key, index) => {
         if (index >= 1 && index <= 5) return <Center py="4" bg={`violet.${key}`}>
                 {key}
@@ -88,7 +95,7 @@ const CarDetails = () => {
       </Center>
       <VStack flex="1">
       <Image  style={styles.stretch}
-          source={require("../assets/car.jpg")}/>
+          source={require("../assets/images/car.jpg")}/>
         {/* {Object.keys(colors.violet).map((key, index) => {
         if (index >= 1 && index <= 5) return <Center py="4" bg={`violet.${key}`}>
                 {key}

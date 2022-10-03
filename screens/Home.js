@@ -34,7 +34,7 @@ export default function Home({ navigation }) {
 
         <View  style={styles.container}>
         <Image  style={styles.stretch}
-          source={require("../assets/car.jpg")}/>
+          source={require("../assets/images/car.jpg")}/>
 
 
 

@@ -17,7 +17,7 @@ export default function Register({ navigation }) {
 
       <Center>
       <Image 
-        source={require("../assets/log.png")}
+        source={require("../assets/icons/log.png")}
       />
       </Center>
 
