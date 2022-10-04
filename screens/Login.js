@@ -10,8 +10,6 @@ export default function Login({ navigation }) {
 
     <NativeBaseProvider>
 
-      
-    
       <VStack space={10} w="75%" maxW="300px" mx="auto">
       <Text fontSize="3xl" bold underline mt="10%" ml="35%" color={Colors.darkGreen}>Login</Text>
 
@@ -21,19 +19,13 @@ export default function Login({ navigation }) {
       />
       </Center>
 
-
-      
-
       <Input size="2xl" placeholder="User Name" mt="20%" />
       <Input size="2xl" placeholder="Pass word" />
 
       
       <Button colorScheme="success" mt="40%" fontWeight="bold" rounded="full" onPress={()=>{navigation.navigate("AddCar")}}>Login</Button>
-
-      
+ 
       </VStack>
-      
-
       
       </NativeBaseProvider>
 
