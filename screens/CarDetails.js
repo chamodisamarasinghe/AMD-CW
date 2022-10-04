@@ -419,11 +419,11 @@ const CarDetails = () => {
 
 
 
-        <Button colorScheme="success" mt="10%" fontWeight="bold" rounded="full" onPress={()=>{navigation.navigate("CarDetails")}}>Login</Button>
+        <Button colorScheme="success" mt="10%" fontWeight="bold" rounded="full" onPress={()=>{navigation.navigate("AddCar")}}>Login</Button>
     </ScrollView>;
 };
 
-    export default () => {
+    export default ({ navigation }) => {
         return (
           <NativeBaseProvider>
             <Center flex={1} px="3">
