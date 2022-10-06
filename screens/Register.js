@@ -1,8 +1,39 @@
-import {  View,Alert} from 'react-native'
+import {  View,Alert,StyleSheet} from 'react-native'
 import React ,{ useState } from 'react'
-import { NativeBaseProvider, Box,Text, VStack,Input,Icon,MaterialIcons,show,Pressable,Image, Center,Button} from "native-base";
+import { NativeBaseProvider,HStack, Box,Text, VStack,Input,Icon,MaterialIcons,show,Pressable,Image, Center,Button} from "native-base";
 import Buttone from '../components/Buttone';
 import Colors from '../assets/color';
+
+
+// const styles = StyleSheet.create({
+//   container: {
+//     paddingTop: 10,
+//     // backgroundColor:'green'
+//   },
+//   stretch: {
+//     width: 300,
+//     height: 200,
+//     resizeMode: 'stretch',
+//     // marginTop:'10%'
+//   },
+
+//   text:{
+//     color:'green',
+//     fontWeight:'bold',
+//     fontSize:25,
+//     marginStart:40,
+//     marginLeft:30
+//   },
+
+//   text1:{
+//     color:'black',
+//     fontWeight:'bold',
+//     fontSize:20,
+//     marginStart:40,
+//     marginLeft:90,
+//     marginTop:0.1
+//   }
+// });
 
 export default function Register({ navigation }) {
   const [fullName, setFullName] = useState('');
@@ -63,43 +94,77 @@ export default function Register({ navigation }) {
       <VStack space={3} w="75%" maxW="300px" mx="auto">
       <Text fontSize="3xl" bold underline mt="10%" ml="34%" color={Colors.darkGreen}>Sign Up</Text>
 
-      {/* <Center>
+      <Center>
       <Image 
         source={require("../assets/icons/log.png")}
       />
-      </Center> */}
+      </Center>
 
 
-      <VStack space={4}  mt="15%"   maxW="300px" mx="auto">
-                <Input mx="3" value={fullName} color="black" onChangeText={(e) => { setFullName(e) }} placeholder="Full Name" w="80%" />
-                <Input mx="3" value={email} color="black" onChangeText={(e) => { setEmail(e) }} placeholder="Email" w="80%" />
-                <Input mx="3" value={contactNum} color="black" onChangeText={(e) => { setContactNum(e) }} placeholder="Contact Num" w="80%" />
-                <Input mx="3" value={username} color="black" onChangeText={(e) => { setUsername(e) }} placeholder="Username" w="80%" />
-                <Input mx="3" value={password} color="black" onChangeText={(e) => { setPassword(e) }} placeholder="Password" w="80%" />
-                <Button size="md"  colorScheme="primary" rounded="full" onPress={() => {
+      <VStack space={4}  mt="5%"   maxW="300px" mx="auto">
+                <Input mx="3" value={fullName} color="black" onChangeText={(e) => { setFullName(e) }} placeholder="Full Name" w="90%" />
+                <Input mx="3" value={email} color="black" onChangeText={(e) => { setEmail(e) }} placeholder="Email" w="90%" />
+                <Input mx="3" value={contactNum} color="black" onChangeText={(e) => { setContactNum(e) }} placeholder="Contact Num" w="90%" />
+                <Input mx="3" value={username} color="black" onChangeText={(e) => { setUsername(e) }} placeholder="Username" w="90%" />
+                <Input mx="3" value={password} color="black" onChangeText={(e) => { setPassword(e) }} placeholder="Password" w="90%" />
+                <Button size="md"  colorScheme="blue" rounded="full" onPress={() => {
           saveUser()
           
         }}>
                     Sign Up
                 </Button>
 
-                <Button colorScheme="success" mt="20%" fontWeight="bold" rounded="full" onPress={()=>{navigation.navigate("CarDetails")}}>Car Details</Button>
+
+
+
+                <HStack space={2} alignSelf={'center'} mt="5%">
+          <Text style={styles.login_label}>Already have an account?</Text>
+          <Button size="md"
+            variant="link"
+            colorScheme={'secondary'}
+            style={styles.btn_login}
+            onPress={() => {
+              try {
+                navigation.navigate("Login")
+              } catch (err) {
+                console.log(err);
+              }
+            }}
+          >
+            <Text style={styles.btn_login_label}>Login</Text>
+          </Button>
+        </HStack>
+
+
+
+                {/* <HStack   mt="10%"> */}
+          {/* <Text fontSize="20" mt="2%" ml="5">Already have an account?</Text> */}
+          {/* <Button colorScheme="success" mt="10%" fontWeight="bold" rounded="full" onPress={()=>{navigation.navigate("AddCar")}}>Login</Button> */}
+          {/* <Button size="md"
+            variant="link"
+            colorScheme={'secondary'}
+           
+            onPress={() => {
+              try {
+                navigation.navigate("Login")
+              } catch (err) {
+                console.log(err);
+              }
+            }}
+          > */}
+            {/* <Text mr="10%" mt="5%" fontSize="20" colorScheme="secondary">Login</Text>
+          </Button>  */}
+        {/* </HStack>
+
+                {/* <Button colorScheme="success" mt="20%" fontWeight="bold" rounded="full" onPress={()=>{navigation.navigate("CarDetails")}}>Car Details</Button> */}
             </VStack>
 
-      {/* <Input size="2xl" placeholder="Full Name" mt="20%" />
-      <Input size="2xl" placeholder="Email" />
-      <Input size="2xl" placeholder="Contact" />
-      <Input size="2xl" placeholder="User Name" />
-      <Input size="2xl" placeholder="Pass word" />
 
-      
-      <Button colorScheme="success" mt="20%" fontWeight="bold" rounded="full" >Sign Up</Button> */}
+
 
       
       </VStack>
-      
-
-      
+  
       </NativeBaseProvider>
 
       
@@ -107,3 +172,28 @@ export default function Register({ navigation }) {
     
   )
 }
+
+
+
+
+const styles = StyleSheet.create({
+  
+  login_label: {
+    
+    marginTop:'2.75%',
+    color: 'green',
+    fontSize: 17,
+    fontWeight: 'bold',
+    
+  },
+  
+  btn_login_label: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 17
+  }
+  
+})
+
+
+
