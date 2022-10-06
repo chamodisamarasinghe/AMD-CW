@@ -1,4 +1,4 @@
-import {  View} from 'react-native'
+import {  View,Alert} from 'react-native'
 import React ,{ useState } from 'react'
 import { NativeBaseProvider, Box,Text, VStack,Input,Icon,MaterialIcons,show,Pressable,Image, Center,Button} from "native-base";
 import Buttone from '../components/Buttone';
@@ -12,23 +12,23 @@ export default function Register({ navigation }) {
   const [password, setPassword] = useState('');
 
 
-  saveUser = async () => {
+  const saveUser = async () => {
 
     if (fullName != "" && email != "" && contactNum != "" && username != "" && password != "") {
-      fetch('http://192.168.1.100:8000/users', {
+      fetch('http://192.168.8.175:8000/users', {
         method: 'POST',
         body: JSON.stringify({
           	    fullName: fullName,
                 email: email,
                 contactNum: contactNum,
                 username: username,
-		password: password
+		            password: password
         }),
         headers: {
           'Content-type': 'application/json; charset=UTF-8',															
         },
       })
-        .then((response) => response.json())
+      .then((response) => response.json())
         .then((json) => {
           if (json.status === "500") {
             Alert.alert(json.message);
@@ -37,10 +37,19 @@ export default function Register({ navigation }) {
             clearTextFields();
           }
         })
-        .catch((err) => Alert.alert(err));
+        .catch((err) => Alert.alert(err.message));
     } else {
       Alert.alert("Please fill all the fields and try again.")
     }
+  }
+
+
+  const clearTextFields = () => {
+    setFullName("");
+    setEmail("");
+    setContactNum("");
+    setUsername("");
+    setPassword("");
   }
 
 
@@ -54,11 +63,11 @@ export default function Register({ navigation }) {
       <VStack space={3} w="75%" maxW="300px" mx="auto">
       <Text fontSize="3xl" bold underline mt="10%" ml="34%" color={Colors.darkGreen}>Sign Up</Text>
 
-      <Center>
+      {/* <Center>
       <Image 
         source={require("../assets/icons/log.png")}
       />
-      </Center>
+      </Center> */}
 
 
       <VStack space={4}  mt="15%"   maxW="300px" mx="auto">
@@ -67,8 +76,11 @@ export default function Register({ navigation }) {
                 <Input mx="3" value={contactNum} color="black" onChangeText={(e) => { setContactNum(e) }} placeholder="Contact Num" w="80%" />
                 <Input mx="3" value={username} color="black" onChangeText={(e) => { setUsername(e) }} placeholder="Username" w="80%" />
                 <Input mx="3" value={password} color="black" onChangeText={(e) => { setPassword(e) }} placeholder="Password" w="80%" />
-                <Button size="md"  colorScheme="primary" rounded="full" onPress={saveUser}>
-                    Save Car
+                <Button size="md"  colorScheme="primary" rounded="full" onPress={() => {
+          saveUser()
+          
+        }}>
+                    Sign Up
                 </Button>
 
                 <Button colorScheme="success" mt="20%" fontWeight="bold" rounded="full" onPress={()=>{navigation.navigate("CarDetails")}}>Car Details</Button>

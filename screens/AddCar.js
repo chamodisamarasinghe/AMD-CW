@@ -63,7 +63,7 @@ export default function AddCar({ navigation }) {
     saveCar = async () => {
 
         if (registerNumber != "" && brand != "" && vehicleNumber != "" && price != "") {
-          fetch('http://192.168.1.100:8000/users', {
+          fetch('http://192.168.8.175:8000/cars', {
             method: 'POST',
             body: JSON.stringify({
                   registerNumber: registerNumber,
@@ -75,16 +75,16 @@ export default function AddCar({ navigation }) {
               'Content-type': 'application/json; charset=UTF-8',															
             },
           })
-            .then((response) => response.json())
-            .then((json) => {
-              if (json.status === "500") {
-                Alert.alert(json.message);
-              } else {
-                Alert.alert(json.message);
-                clearTextFields();
-              }
-            })
-            .catch((err) => Alert.alert(err));
+          .then((response) => response.json())
+          .then((json) => {
+            if (json.status === "500") {
+              Alert.alert(json.message);
+            } else {
+              Alert.alert(json.message);
+              clearTextFields();
+            }
+          })
+          .catch((err) => Alert.alert(err.message));
         } else {
           Alert.alert("Please fill all the fields and try again.")
         }
@@ -99,7 +99,7 @@ export default function AddCar({ navigation }) {
 
 
 
-      
+
     return (
         <NativeBaseProvider>
            <Text fontSize="3xl" bold underline mt="10%" ml="20%" color={Colors.darkGreen}>Add a new Car</Text>
