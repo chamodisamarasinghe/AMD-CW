@@ -1,6 +1,6 @@
 import {  View,Alert,StyleSheet} from 'react-native'
 import React ,{ useState } from 'react'
-import { NativeBaseProvider,HStack, Box,Text, VStack,Input,Icon,MaterialIcons,show,Pressable,Image, Center,Button} from "native-base";
+import { NativeBaseProvider,HStack, Box,Text, VStack,Input,Icon,MaterialIcons,show,Pressable,Image, Center,Button, ScrollView} from "native-base";
 import Buttone from '../components/Buttone';
 import Colors from '../assets/color';
 
@@ -88,7 +88,7 @@ export default function Register({ navigation }) {
       
 
     <NativeBaseProvider>
-
+      <ScrollView>
       
     
       <VStack space={3} w="75%" maxW="300px" mx="auto">
@@ -164,7 +164,7 @@ export default function Register({ navigation }) {
 
       
       </VStack>
-  
+      </ScrollView>
       </NativeBaseProvider>
 
       
